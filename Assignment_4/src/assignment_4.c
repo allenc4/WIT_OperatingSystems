@@ -12,17 +12,17 @@
 #include <stdio.h>
 #include "LinkedList.h"
 
-#define NPROC           2    /* number of child processes to run */
+#define NPROC           4     /* number of child processes to run */
 #define MARKED          1     /* lock not available (a child process already 
 								 owns this */
 #define NOTMARKED       0     /* lock available (no child process owns this 
 								 lock) */
-#define MAXCHILDLOCKS	5     /* max resource a child can hold before requesting
+#define MAXCHILDLOCKS	4     /* max resource a child can hold before requesting
                                'release locks' from the LockManager */
 
 #define NO_DEADLOCK             0       /* there is no deadlock */
 #define DEADLOCK_DETECTED       1       /* Deadlock detected    */
-#define MAXLOCKS                10      /* Total available resources (size of 
+#define MAXLOCKS                20       /* Total available resources (size of 
 										   the lock table) */
 
 /* 
